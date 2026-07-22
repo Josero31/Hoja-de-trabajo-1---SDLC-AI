@@ -17,11 +17,11 @@ POC de una TUI (Text User Interface) para el manejo del carrito de usuarios anó
 ```
 | Por favor ingrese su nombre.
 > Rodrigo Custodio
-| Hola Rodrigo! Que deseas modificar en tu carrito?
+| Hola Rodrigo! ¿Qué deseas modificar en tu carrito?
 > 12345 5
 | Tu carrito es:
 |   - 12345 con 5 unidades
-| Que más deseas hacer?
+| ¿Qué más deseas hacer?
 > 12345 -5
 | Tu carrito está vacío, que más deseas hacer?
 > 12345 -5
