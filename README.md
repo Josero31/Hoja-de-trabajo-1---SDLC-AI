@@ -70,7 +70,7 @@ Este proyecto sigue **GitHub Flow**:
 
 ## Herramienta de agentic coding
 
-Se utilizó **Claude Code** (Anthropic) durante el desarrollo. Ver [docs/agentic-workflow.md](docs/agentic-workflow.md) para la evidencia detallada: prompts utilizados, qué generó la IA y qué se editó manualmente.
+Se utilizó **Claude Code** (Anthropic) durante el desarrollo. *(Pendiente)* Se agregará `docs/agentic-workflow.md` con la evidencia detallada: prompts utilizados, qué generó la IA y qué se editó manualmente.
 
 Para convenciones del proyecto y reglas para agentes de código ver [AGENTS.md](AGENTS.md).
 
