@@ -38,11 +38,11 @@ POC de una TUI (Text User Interface) para el manejo del carrito de usuarios anó
 
 ## Cómo correr
 
-```bash
-# Requisitos: Node.js >= 18, pnpm
-pnpm install
-pnpm start
-```
+> Nota: este repositorio aún no incluye `package.json` ni los scripts necesarios; estas instrucciones aplicarán cuando se agregue la implementación.
+
+    # Requisitos: Node.js >= 18, pnpm
+    pnpm install
+    pnpm start
 
 ## Tests
 
