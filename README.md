@@ -29,7 +29,7 @@ POC de una TUI (Text User Interface) para el manejo del carrito de usuarios anó
 > 456 29
 | Tu carrito es:
 |   - 456 con 29 unidades
-| Que más deseas hacer?
+| ¿Qué más deseas hacer?
 > bye
 | Adiós fue un gusto atenderte!
 ```
