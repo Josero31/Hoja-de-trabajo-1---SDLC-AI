@@ -104,6 +104,6 @@ El formato de entrada del usuario es `<id_producto> <cantidad>` separado por esp
 Mensajes esperados (ver mock en README para el formato exacto con pipes `|`):
 
 - Carrito con productos → listar cada producto
-- Carrito vacío tras operación → `"Tu carrito está vacío, que más deseas hacer?"`
-- Producto inexistente al restar → `"Oops parece que no tienes el producto X agregado a tu carrito."`
+- Carrito vacío tras operación → "Tu carrito está vacío, ¿qué más deseas hacer?"
+- Producto inexistente al restar → "Oops parece que no tienes el producto X agregado a tu carrito."
 - Despedida → `"Adiós fue un gusto atenderte!"`
