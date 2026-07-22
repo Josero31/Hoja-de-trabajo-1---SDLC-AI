@@ -76,4 +76,4 @@ Para convenciones del proyecto y reglas para agentes de código ver [AGENTS.md](
 
 ## Licencia
 
-MIT
+Pendiente definir la licencia del proyecto.
