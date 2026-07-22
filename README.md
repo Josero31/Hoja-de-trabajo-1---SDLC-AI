@@ -23,9 +23,9 @@ POC de una TUI (Text User Interface) para el manejo del carrito de usuarios anó
 |   - 12345 con 5 unidades
 | ¿Qué más deseas hacer?
 > 12345 -5
-| Tu carrito está vacío, que más deseas hacer?
+| Tu carrito está vacío, ¿qué más deseas hacer?
 > 12345 -5
-| Oops parece que no tienes el producto 12345 agregado a tu carrito. Que más deseas hacer?
+| Oops parece que no tienes el producto 12345 agregado a tu carrito. ¿Qué más deseas hacer?
 > 456 29
 | Tu carrito es:
 |   - 456 con 29 unidades
