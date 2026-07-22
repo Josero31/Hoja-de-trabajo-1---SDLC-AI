@@ -21,9 +21,11 @@ pnpm test
 pnpm build
 ```
 
-## Estructura del proyecto
+## Estructura objetivo del proyecto
 
-```
+> Nota: la estructura listada abajo es el objetivo del proyecto y puede no existir todavía en el repositorio.
+
+~~~
 /
 ├── AGENTS.md                          # Este archivo
 ├── README.md                          # Documentación del proyecto
@@ -42,7 +44,7 @@ pnpm build
 │   └── pull_request_template.md
 ├── package.json
 └── .gitignore
-```
+~~~
 
 ## Convenciones de código
 
