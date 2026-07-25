@@ -1,0 +1,29 @@
+{
+  "name": "shop502-cart-tui",
+  "version": "1.0.0",
+  "description": "POC de TUI para el manejo del carrito de usuarios anónimos de Shop 502",
+  "main": "src/index.js",
+  "bin": {
+    "shop502-cart": "src/index.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build": "pkg . --targets node18-linux-x64,node18-macos-x64,node18-win-x64 --out-path dist"
+  },
+  "pkg": {
+    "scripts": [
+      "src/**/*.js"
+    ],
+    "outputPath": "dist"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^5.16.1",
+    "jest": "^29.7.0"
+  }
+}
