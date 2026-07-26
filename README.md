@@ -7,6 +7,8 @@ POC de una TUI (Text User Interface) para el manejo del carrito de usuarios anó
 | Integrante | Objetivo |
 |------------|----------|
 | Jose (Josero31) | Objetivo 1 — Herramientas de agentic coding |
+| Jose (Josero31) | Objetivo 1 — Probar la suite de tests |
+| Jose (Josero31) | Objetivo 1 — Solucionar errores de tests |
 | Ángel Mérida (SaintPage) | Objetivo 2A — Setup de repo y branch protection |
 | Ángel Mérida (SaintPage) | Objetivo 2B — Lógica del carrito + unit tests (TDD) |
 | Ángel Mérida (SaintPage) | Objetivo 2C — TUI + integration tests |

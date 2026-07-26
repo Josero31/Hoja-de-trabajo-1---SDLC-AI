@@ -41,7 +41,8 @@ pnpm build
 ├── tests/
 │   ├── cart.test.js                   # Unit tests del carrito
 │   ├── parser.test.js                 # Unit tests del parser
-│   └── session.test.js                # Integration tests de la sesión
+│   ├── session.test.js                # Integration tests de la sesión
+│   └── tui.test.js                    # Tests end-to-end de la capa TUI (streams)
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml                     # Tests en PR y push a main
@@ -50,9 +51,6 @@ pnpm build
 ├── package.json
 └── .gitignore
 ~~~
-
-> Nota: `tui.js` e `index.js` (la capa de I/O) todavía no tienen tests propios —
-> ver el gap documentado en `docs/agentic-workflow.md`.
 
 ## Convenciones de código
 

@@ -1,7 +1,8 @@
 # Evidencia de uso de agentic coding
 
-Este documento registra el uso de **Claude Code** (Anthropic) en el proyecto, como
-parte del Objetivo 1 (Jose / Josero31).
+Este documento registra el uso de herramientas de agentic coding en el proyecto
+(Objetivo 1, Jose / Josero31): **Claude Code** (Anthropic) y **GitHub Copilot**
+(agente de código sobre PRs).
 
 ## Sesión documentada: auditoría y actualización de documentación
 
@@ -51,31 +52,44 @@ repositorio:
   confirmó explícitamente con el usuario antes de escribirla (el historial de git
   por sí solo era evidencia suficiente, pero no autoritativa).
 - El alcance de este documento (qué contar como "evidencia") también se acordó con
-  el usuario: se documenta únicamente lo verificable de esta sesión, sin inventar
-  prompts o transcripts de sesiones de otros integrantes que no se registraron en su
-  momento (los PRs #5 y #6 dejaron vacía la sección "Uso de herramientas agénticas"
-  de la plantilla).
+  el usuario: se documenta únicamente lo verificable — de esta sesión, o de historial
+  de git/GitHub Actions que se puede confirmar con `git log` y `gh run list` — sin
+  inventar prompts o transcripts que no quedaron registrados (los PRs #3-#5 dejaron
+  vacía la sección "Uso de herramientas agénticas" de la plantilla).
 - Todos los cambios de esta sesión se hicieron sobre la rama `Jose` y se subieron
   como Pull Request hacia `main`, siguiendo el flujo GitHub Flow del proyecto
   (revisión de un compañero antes de mergear).
 
-## Gaps detectados (no corregidos en esta sesión, requieren decisión del equipo)
+## Gaps detectados y corregidos
 
-- `src/tui.js` y `src/index.js` (la capa de I/O) no tienen ningún test que los
-  importe. Jest, al no tener `collectCoverageFrom` configurado, excluye del reporte
-  de cobertura los archivos que ningún test toca — por eso el `94.84 %` de líneas
-  que reporta `pnpm test` **no incluye** esos dos archivos, no que estén cubiertos.
-  `docs/objetivo-2-api.md` ya documenta cómo probar `tui.js` end-to-end con streams
-  (`PassThrough`); falta escribir ese test.
-- El umbral de cobertura del 80 % que menciona el README no está reforzado por
-  configuración (`coverageThreshold` en Jest) ni en `ci.yml` — el pipeline sube el
-  reporte pero no falla el build si la cobertura baja.
+La IA ayudó a detectar errores/huecos en los tests que luego se corrigieron en la
+misma sesión: `tui.js` e `index.js` no tenían ningún test, y Jest los excluía del
+reporte de cobertura en vez de contarlos como no cubiertos. Se agregó
+`tests/tui.test.js` y se configuró `coverageThreshold` (80 %) en `package.json`
+para que el umbral se haga cumplir de verdad. `pnpm test` ahora pasa 26/26.
 
-## Sesiones anteriores (Objetivos 2A–2D)
+## Sesión previa (Objetivo 2D): GitHub Copilot arregló el CI del PR #6
 
-El README indica que se usó Claude Code durante todo el desarrollo, pero los PRs
-#3–#6 (Ángel Mérida) dejaron vacía la sección "Uso de herramientas agénticas" de la
-plantilla de PR, y no hay transcripts o logs guardados de esas sesiones. No se
-documenta evidencia detallada de esas sesiones aquí para evitar inventar contenido;
-si el equipo cuenta con capturas o historiales reales, deben agregarse a esta
-sección citando el PR correspondiente.
+**Fecha:** 2026-07-25
+**PR:** [#6 — ci: pipelines de tests y publicación de binario a GitHub Artifacts](../../../pull/6)
+**Herramienta:** GitHub Copilot (agente de código, `copilot-swe-agent[bot]`)
+
+Al abrir el PR #6 el job "Tests y cobertura" del CI falló (run
+`30177775992`, `jest --coverage` terminó con exit code 1): el repositorio no tenía
+ningún archivo de test todavía, así que Jest no tenía nada que correr ni cobertura
+que reportar.
+
+Se invocó a GitHub Copilot para atender el PR ("Addressing comment on PR #6", run
+`30179771688`). Copilot detectó el error y lo solucionó creando los tests que no
+existían: el commit `11e4a88` ("test: add baseline Jest tests to fix CI coverage
+job") agregó `tests/cart.test.js`, `tests/parser.test.js` y `tests/session.test.js`
+(248 líneas). Con esos tests el job de CI pasó y el PR se pudo mergear a `main`.
+
+## Otras sesiones (Objetivos 2A–2C)
+
+Los PRs #3, #4 y #5 (Ángel Mérida) no dejaron registrada evidencia detallada de
+prompts/uso de IA — la sección "Uso de herramientas agénticas" de la plantilla de
+PR quedó vacía en esos casos. No se documenta contenido inventado aquí; si el
+equipo cuenta con capturas o historiales reales de esas sesiones, deben agregarse
+citando el PR correspondiente.
+
