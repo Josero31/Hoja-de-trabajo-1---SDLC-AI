@@ -7,10 +7,10 @@ POC de una TUI (Text User Interface) para el manejo del carrito de usuarios anó
 | Integrante | Objetivo |
 |------------|----------|
 | Jose (Josero31) | Objetivo 1 — Herramientas de agentic coding |
-| *(por asignar)* | Objetivo 2A — Setup de repo y branch protection |
-| *(por asignar)* | Objetivo 2B — Lógica del carrito + unit tests (TDD) |
-| *(por asignar)* | Objetivo 2C — TUI + integration tests |
-| *(por asignar)* | Objetivo 2D — CI/CD pipelines |
+| Ángel Mérida (SaintPage) | Objetivo 2A — Setup de repo y branch protection |
+| Ángel Mérida (SaintPage) | Objetivo 2B — Lógica del carrito + unit tests (TDD) |
+| Ángel Mérida (SaintPage) | Objetivo 2C — TUI + integration tests |
+| Ángel Mérida (SaintPage) | Objetivo 2D — CI/CD pipelines |
 
 ## Demo de la interfaz
 
@@ -37,8 +37,6 @@ POC de una TUI (Text User Interface) para el manejo del carrito de usuarios anó
 **Formato de comando:** `<id_producto> <cantidad>` — cantidad positiva suma, negativa resta.
 
 ## Cómo correr
-
-> Nota: este repositorio aún no incluye `package.json` ni los scripts necesarios; estas instrucciones aplicarán cuando se agregue la implementación.
 
     # Requisitos: Node.js >= 18, pnpm
     pnpm install
@@ -70,10 +68,10 @@ Este proyecto sigue **GitHub Flow**:
 
 ## Herramienta de agentic coding
 
-Se utilizó **Claude Code** (Anthropic) durante el desarrollo. *(Pendiente)* Se agregará `docs/agentic-workflow.md` con la evidencia detallada: prompts utilizados, qué generó la IA y qué se editó manualmente.
+Se utilizó **Claude Code** (Anthropic) durante el desarrollo. Ver [docs/agentic-workflow.md](docs/agentic-workflow.md) para la evidencia detallada: prompts utilizados, qué generó la IA y qué se editó manualmente.
 
 Para convenciones del proyecto y reglas para agentes de código ver [AGENTS.md](AGENTS.md).
 
 ## Licencia
 
-Pendiente definir la licencia del proyecto.
+MIT — ver [LICENSE](LICENSE).

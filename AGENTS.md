@@ -21,30 +21,38 @@ pnpm test
 pnpm build
 ```
 
-## Estructura objetivo del proyecto
-
-> Nota: la estructura listada abajo es el objetivo del proyecto y puede no existir todavía en el repositorio.
+## Estructura del proyecto
 
 ~~~
 /
 ├── AGENTS.md                          # Este archivo
 ├── README.md                          # Documentación del proyecto
+├── LICENSE                            # Licencia MIT
 ├── docs/
+│   ├── objetivo-2-api.md              # Contrato público de los módulos de src/
 │   └── agentic-workflow.md            # Evidencia del uso de IA (Claude Code)
 ├── src/
 │   ├── cart.js                        # Lógica pura del carrito
-│   └── tui.js                         # Loop de interacción (TUI)
+│   ├── parser.js                      # Parser del input del usuario
+│   ├── messages.js                    # Textos de la TUI
+│   ├── session.js                     # Máquina de estados de la conversación
+│   ├── tui.js                         # Loop de interacción (readline)
+│   └── index.js                       # Entry point del binario
 ├── tests/
 │   ├── cart.test.js                   # Unit tests del carrito
-│   └── tui.test.js                    # Tests de la capa TUI
+│   ├── parser.test.js                 # Unit tests del parser
+│   └── session.test.js                # Integration tests de la sesión
 ├── .github/
-│   ├── workflows/
-│   │   ├── ci.yml                     # Tests en PR y push a main
-│   │   └── cd.yml                     # Build + publicar binario a GitHub Artifacts
-│   └── pull_request_template.md
+│   └── workflows/
+│       ├── ci.yml                     # Tests en PR y push a main
+│       └── cd.yml                     # Build + publicar binario a GitHub Artifacts
+├── pull_request_template.md
 ├── package.json
 └── .gitignore
 ~~~
+
+> Nota: `tui.js` e `index.js` (la capa de I/O) todavía no tienen tests propios —
+> ver el gap documentado en `docs/agentic-workflow.md`.
 
 ## Convenciones de código
 
